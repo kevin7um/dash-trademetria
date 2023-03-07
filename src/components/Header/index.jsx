@@ -24,15 +24,6 @@ export function Header(){
                                 <img src={LogoHeader} alt="Logo Dashboard" />
                             </Link>
                         </div>
-                        <div className="search-content">
-                            <div className="icon-search">
-                                <MagnifyingGlass size={16} color="#ffffff" />
-                            </div>
-                            <form action="">
-                                <input type="text" placeholder='Ir para' />
-                                <button type="submit">Ir</button>
-                            </form>
-                        </div>
                         <div className="profile">
                             <DropdownProfile />
                         </div>
@@ -46,15 +37,6 @@ export function Header(){
                         <Link to="/dashboard">
                             <img src={LogoHeader} alt="Logo Dashboard" />
                         </Link>
-                    </div>
-                    <div className="search-content">
-                        <div className="icon-search">
-                            <MagnifyingGlass size={16} color="#ffffff" />
-                        </div>
-                        <form action="">
-                            <input type="text" placeholder='Ir para' />
-                            <button type="submit">Ir</button>
-                        </form>
                     </div>
                     <div className="profile">
                         <DropdownProfile />
