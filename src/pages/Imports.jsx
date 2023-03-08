@@ -1,12 +1,5 @@
 import { useForm } from 'react-hook-form';
 import { ArrowFatLineUp } from "phosphor-react";
-import { Api } from '../services/api';
-
-import {Footer} from '../components/Footer'
-import { Button } from "../components/Form/Button";
-import { Header } from "../components/Header";
-import { Navbar } from "../components/Header/Navbar";
-
 
 export function Imports() {
 
@@ -20,9 +13,6 @@ export function Imports() {
 
     return (
         <>
-            <Header/>
-            <Navbar/>
-
             <div className="s-imports">
                 <div className="container">
                     <div className="page-title">
@@ -81,8 +71,6 @@ export function Imports() {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </>
     );
 }

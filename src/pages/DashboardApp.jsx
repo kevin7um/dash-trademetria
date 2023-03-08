@@ -1,9 +1,6 @@
 import { SquaresFour } from "phosphor-react";
 import { Link } from "react-router-dom";
 
-import { Header } from "../components/Header";
-import { Navbar } from "../components/Header/Navbar";
-
 import { SaldoResumePeriodo } from "../components/DashResume/SaldoResumePeriodo";
 import { SaldoResume } from "../components/DashResume/SaldoResume";
 import { DashStatistic } from "../components/DashStatistic";
@@ -56,9 +53,6 @@ const data = [
 export function DashboardApp (){
     return (
         <div className="dashboard_app">
-            <Header/>
-            <Navbar/>
-
             <div className="atalho-relatorios">
                 <div className="container">
                     <h4>Dashboard</h4>

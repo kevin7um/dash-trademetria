@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import {MagnifyingGlass} from 'phosphor-react'
 
 import { DropdownProfile } from '../Profile/DropdownProfile';
 import { Navbar } from './Navbar';
@@ -14,10 +13,25 @@ export function Header(){
     }
 
     return (
-        <header>
-            <div className="container">
-                <div className="menu-mobile">
-                    <div className="overlay" onClick={menuOpened}></div>
+        <>
+            <header>
+                <div className="container">
+                    <div className="menu-mobile">
+                        <div className="overlay" onClick={menuOpened}></div>
+                        <div className="left-area">
+                            <div className="logo">
+                                <Link to="/dashboard">
+                                    <img src={LogoHeader} alt="Logo Dashboard" />
+                                </Link>
+                            </div>
+                            <div className="profile">
+                                <DropdownProfile />
+                            </div>
+
+                            <Navbar/>
+                        </div>
+                    </div>
+
                     <div className="left-area">
                         <div className="logo">
                             <Link to="/dashboard">
@@ -27,26 +41,14 @@ export function Header(){
                         <div className="profile">
                             <DropdownProfile />
                         </div>
-
-                        <Navbar/>
                     </div>
+
+                    <button onClick={menuOpened} className="btn-mobile">
+                        <img src={BtnMobile} alt="Menu" />
+                    </button>
                 </div>
-
-                <div className="left-area">
-                    <div className="logo">
-                        <Link to="/dashboard">
-                            <img src={LogoHeader} alt="Logo Dashboard" />
-                        </Link>
-                    </div>
-                    <div className="profile">
-                        <DropdownProfile />
-                    </div>
-                </div>
-
-                <button onClick={menuOpened} className="btn-mobile">
-                    <img src={BtnMobile} alt="Menu" />
-                </button>
-            </div>
-        </header>
+            </header>
+            <Navbar />
+        </>
     );
 }

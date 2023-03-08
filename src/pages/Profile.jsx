@@ -3,12 +3,10 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { UserCircle, XCircle, FloppyDisk } from "phosphor-react";
 
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { Navbar } from "../components/Header/Navbar";
 import { UserRequest, UserUpdate, UserDelete } from "../context/AuthProvider/util";
 
 import ImageProfile from '../img/avatar-placeholder.webp';
+import { useAuth } from "../context/AuthProvider/useAuth";
 
 const dataT = {
     name: 'Kevin',
@@ -61,9 +59,6 @@ export function Profile() {
 
     return (
         <>
-            <Header/>
-            <Navbar/>
-
             <div className="s-profile">
                 <div className="container">
                     <div className="page-title">
@@ -135,8 +130,6 @@ export function Profile() {
                     </div>
                 </div>
             </div>
-
-            <Footer/>
         </>
     );
 }

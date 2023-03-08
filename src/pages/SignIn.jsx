@@ -27,7 +27,7 @@ export function SignIn({openModal}){
         try {
             await auth.signin(values.email, values.password);
 
-            navigate('/dashboard')
+            navigate('/')
 
         } catch (error) {
             alert("email or password invalid!")
