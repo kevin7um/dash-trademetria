@@ -1,5 +1,6 @@
-import {Gauge, SquaresFour, CaretDown ,ArrowSquareIn} from 'phosphor-react'
+import {Gauge ,ArrowSquareIn} from 'phosphor-react'
 import {Link} from 'react-router-dom'
+import { DropdownReports } from './DropdownReports';
 
 export function Navbar(){
     return (
@@ -12,15 +13,11 @@ export function Navbar(){
                             <span>Dashboard</span>
                         </Link>
                     </li>
+
                     <li className="nav-item">
-                        <Link to="/relatorios">
-                            <SquaresFour size={20} />
-                            <span>Relatórios</span>
-                            {/* <div className="dropdow-icon">
-                                <CaretDown className='dropdow-icon' size={20} />
-                            </div> */}
-                        </Link>
+                        <DropdownReports/>
                     </li>
+
                     <li className="nav-item">
                         <Link to="/importar">
                             <ArrowSquareIn size={20}/>

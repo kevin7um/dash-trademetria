@@ -55,7 +55,7 @@ export const DropdownProfile = () => {
                     </li>
                     <li>
                         <button onClick={ () => {
-                            auth.logout( () => navigate('/') );
+                            auth.logout( () => navigate('/signin') );
                         }}>
                             <SignOut size={16} color='#fff' weight='fill' />
                             <span>Logout</span>

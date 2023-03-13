@@ -1,11 +1,11 @@
 
 import { Navigate } from "react-router-dom";
-import { useAuth } from "../context/AuthProvider/useAuth";
+import { getUserLocalStorage } from "../context/AuthProvider/util";
 
 export const ProtectedLayout = ({children}) => {
-    const auth = useAuth();
+    const user = getUserLocalStorage()
 
-    if(!auth.email){
+    if(!user){
        
        return <Navigate to="/signin"/>;
     }

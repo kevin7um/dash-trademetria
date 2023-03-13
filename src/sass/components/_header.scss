@@ -156,14 +156,10 @@ header{
                     align-items: flex-start;
                     gap: 1.2rem;
 
-                    li ,a{
+                    li{
                         padding: .4rem 0;
                         width: 100%;
                         margin: 0;
-
-                        :hover{
-                            background-color: $gray-dark-400;
-                        }
                     }
                 }
             }
@@ -205,11 +201,6 @@ nav{
                     color: $gray-light-600;
                     margin-left: .6rem;
                 }
-                .dropdow-icon{
-                    display: flex;
-                    align-items: center;
-                    margin-left: .6rem;
-                }
             }
 
             &:hover{
@@ -241,7 +232,7 @@ nav{
     }
 }
 
-@include responsive(600px){
+@include responsive(991px){
     header{
         .left-area{
             .search-content{

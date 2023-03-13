@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 import * as yup from "yup";
@@ -15,6 +16,8 @@ const SigninSchema = yup.object({
 }).required('Senha obrigatória!');
 
 export function SignIn({openModal}){
+
+    const [errorMessage, setErrorMessage] = useState('Faça login para entrar!')
     
     const auth = useAuth();
     const navigate = useNavigate();
@@ -30,7 +33,8 @@ export function SignIn({openModal}){
             navigate('/')
 
         } catch (error) {
-            alert("email or password invalid!")
+            const erro = auth.errorMessage;
+            setErrorMessage(erro);
         }
     };
 
@@ -44,7 +48,7 @@ export function SignIn({openModal}){
                         </header>
                         <main className="form-content">
                             <h4>Bem-vindo(a) ao Dashboard</h4>
-                            <span>Faça login para entrar</span>
+                            <span>{errorMessage}</span>
                             <form onSubmit={handleSubmit(Authenticated)} className="form">
                                 <Input 
                                     label='E-mail'

@@ -57,23 +57,23 @@ export function DashboardApp (){
                 <div className="container">
                     <h4>Dashboard</h4>
                     <div className="atalho-content">
-                        <Link to='#' >
+                        <Link to='/relatorios/trades' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Relatório de Trades</span>
                         </Link>
-                        <Link to='#' >
+                        <Link to='/relatorios/desempenho' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Relatório de Desempenho</span>
                         </Link>
-                        <Link to='#' >
+                        <Link to='/relatorios/instrumentos' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Relatório por instrumento</span>
                         </Link>
-                        <Link to='#' >
+                        <Link to='/relatorios/calendario-custodias' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Calendário de Cústódia</span>
                         </Link>
-                        <Link to='#' >
+                        <Link to='/relatorios/custodias' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Minhas custódias</span>
                         </Link>

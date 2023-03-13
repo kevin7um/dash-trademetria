@@ -17,6 +17,7 @@ const dataT = {
 
 export function Profile() {
     const navigate = useNavigate();
+    const auth = useAuth();
 
     const [userData, setUserData] = useState(dataT);
 
@@ -43,7 +44,7 @@ export function Profile() {
 
     function userDelete(){
         UserDelete(2);
-        navigate('/);')
+        auth.logout( () => navigate('/') );
     }
 
     const onSubmit = async (values) => {
