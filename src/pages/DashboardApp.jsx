@@ -69,11 +69,11 @@ export function DashboardApp (){
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Relatório por instrumento</span>
                         </Link>
-                        <Link to='/relatorios/calendario-custodias' >
+                        <Link to='/relatorios/calendario-trades' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
-                            <span>Calendário de Cústódia</span>
+                            <span>Calendário Trader</span>
                         </Link>
-                        <Link to='/relatorios/custodias' >
+                        <Link to='/relatorios/portifolio' >
                             <SquaresFour size={20} fill='#fff' weight="bold"/>
                             <span>Minhas custódias</span>
                         </Link>

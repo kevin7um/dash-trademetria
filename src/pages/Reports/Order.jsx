@@ -5,7 +5,7 @@ import { ResultBox } from '../../components/Reports/ResultBox'
 import { Section } from '../../components/Section'
 
 //Fazer a requisição do PHP
-import dataTable from '../../components/DataTable/object.json'
+import dataTable from '../../components/DataTable/dataOrdens.json'
 import { DataTables } from '../../components/DataTable'
 
 export function Order() {
