@@ -22,5 +22,35 @@
     }
     .box-content{
         padding: 2rem 0;
+
+        label{
+            input,select{
+                color: $gray-light-400;
+                background-color: $gray-dark-300;
+                outline: none;
+            }
+        }
+        .dataTables_wrapper .dataTables_scroll{
+            padding-top: 1.6rem;
+        }
+    }
+
+}
+
+.chart-content-portfolio{
+    display: flex;
+    gap: 2.4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card-box{
+        flex: 1 1 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .box-title{
+            width: 100%;
+        }
     }
 }

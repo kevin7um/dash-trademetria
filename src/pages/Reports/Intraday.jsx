@@ -1,9 +1,11 @@
 import React from 'react'
-import { Gauge} from 'phosphor-react';
+import { SquaresFour} from 'phosphor-react';
 
 import { FilterBox } from '../../components/Reports/FilterBox'
 import { ResultBox } from '../../components/Reports/ResultBox'
 import { Section } from '../../components/Section'
+
+import IconStatistic from "../../img/Icon.png"
 
 export function Intraday() {
   return (
@@ -35,8 +37,22 @@ export function Intraday() {
         </form>
       </FilterBox>
       
-      <ResultBox resultTitle='Mostrando todos os Trades' Icon={Gauge}>
-        Nenhum resultado para mostrar!
+      <ResultBox resultTitle='Relatório DayTrader' Icon={SquaresFour}>
+        <div className="dash-statistic">
+          <div className="box-statistic">
+              <div className="statistic">
+                  <span>Fator de Lucro</span>
+                  <h6>2.63/2.65</h6>
+                  <div className="box-info">
+                      <span>Bom</span>
+                      <span>Aumente seu capital</span>
+                  </div>
+              </div>
+              <div className="icon-statistic">
+                  <img src={IconStatistic} />
+              </div>
+          </div>
+        </div>
       </ResultBox>
     </Section>
   )

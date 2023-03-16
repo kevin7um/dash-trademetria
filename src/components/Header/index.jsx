@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { DropdownProfile } from '../Profile/DropdownProfile';
 import { Navbar } from './Navbar';
 
 import LogoHeader from '../../img/logo.png'
 import BtnMobile from '../../img/btn-mobile.svg';
+import { useEffect } from 'react';
+
+
 
 export function Header(){
 
     function menuOpened(){
         document.documentElement.classList.toggle('menu-opened');
     }
-
+    
+    const location = useLocation();
+    useEffect( () => {
+        document.documentElement.classList.remove('menu-opened');
+    }, [location]);
     return (
         <>
             <header>

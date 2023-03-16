@@ -31,7 +31,7 @@
         padding: .4rem 0;
         z-index: 10;
         position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         background: $gray-dark-200;
         margin-top: 1.2rem;
@@ -53,6 +53,7 @@
 }
 
 .dropdown-reports.open > .dropdown-menu{
+    display: flex;
     opacity: 1;
     visibility: visible;
     translate: 0;

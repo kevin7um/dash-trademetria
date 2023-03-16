@@ -21,7 +21,8 @@ export function DropdownReports() {
         </div>
         <div 
             className="dropdown-menu" 
-            onMouseLeave={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(!isOpen)}
+            onMouseLeave={ () => setIsOpen(false)}
         >
             <Link to="/relatorios/trades" >Relatório de Trades</Link>
             <Link to="/relatorios/ordens" >Relatório de Ordens</Link>
